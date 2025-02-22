@@ -40,7 +40,10 @@ class day_3 extends StatelessWidget {
                 CachedNetworkImage(
                   imageUrl:
                       "https://www.shutterstock.com/image-photo/chameleon-close-eye-portrait-reptile-600nw-2466925375.jpg",
-                  fit: BoxFit.fitWidth,
+                  errorWidget:
+                      (context, url, error) => Image.network(
+                        "https://static.vecteezy.com/system/resources/thumbnails/012/042/292/small_2x/warning-sign-icon-transparent-background-free-png.png",
+                      ),
                 ),
               ],
             ),
